@@ -1,9 +1,8 @@
 let express = require('express');
 let app = express();
 
-let frontend = require('./webserver/frontend');
-
-app.use("/wiki", frontend);
+app.use("/", require('./webserver/frontend'));
+app.use("/wiki", require('./webserver/wiki'));
 
 let server = app.listen(8085, () => {
     var host = server.address().address;

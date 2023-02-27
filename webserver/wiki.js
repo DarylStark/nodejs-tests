@@ -4,12 +4,12 @@ const router = express.Router();
 
 // Home page route.
 router.get("/", function (req, res) {
-    res.send("Frontend Homepage!");
+    res.send("Wiki home page");
 });
 
 // About page route.
 router.get("/about", function (req, res) {
-    res.send("Site created by Daryl S.");
+    res.send("About this wiki");
 });
 
 module.exports = router;
